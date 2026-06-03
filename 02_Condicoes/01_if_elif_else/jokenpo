@@ -1,0 +1,37 @@
+from random import randint
+jokenpo = ('Pedra', 'Papel', 'Tesoura')
+computador = randint(0,2)
+print("tente acertar: ")
+print("0 - Pedra ")
+print("1 - Papel ")
+print("2 - Tesoura ")
+jogador = int(input("faca sua escolha: "))
+
+print("-=-"*15)
+print(f"o computador escolheu {jokenpo[computador]}")
+print(f"o jogador escolheu {jokenpo[jogador]}")
+print("-=-"*15)
+
+if computador == 0:
+    if jogador == 0:
+        print(f"os dois escolheram pedra, houve um empate")
+    elif jogador == 1:
+        print(f"voce ganhou, vc escolheu papel e o computador escolheu pedra")
+    elif jogador == 2:
+        print(f"voce perdeu, vc escolheu tesoura e o computador escolheu pedra")
+elif computador == 1:
+    if jogador == 0:
+        print(f"voce perdeu, vc escolheu pedra e o computador escolheu papel")
+    elif jogador == 1:
+        print(f"os dois escolheram pedra, houve um empate")
+    elif jogador == 2:
+        print(f"voce ganhou, vc escolheu tesoura e o computador escolheu papel")
+elif computador == 2:
+    if jogador == 0:
+        print(f"voce ganhou, vc escolheu pedra e o computador escolheu tesoura")
+    elif jogador == 1:
+        print(f"voce perder, voce escolheu papel e o computador escolheu tesoura")
+    elif jogador == 2:
+        print(f"os dois escolheram pedra, houve um empate")
+else:
+    print("opcao invalida")

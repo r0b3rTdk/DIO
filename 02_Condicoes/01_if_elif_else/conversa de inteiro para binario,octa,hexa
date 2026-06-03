@@ -1,0 +1,15 @@
+numero = int(input("Digite o número inteiro: "))
+print("-=-" * 20)
+print("1 - Binário")
+print("2 - Octal")
+print("3 - Hexadecimal")
+escolha = int(input("Escolha a opção de conversão: "))
+
+if escolha == 1:
+    print(f"O número {numero} em binário é: {bin(numero)}")
+elif escolha == 2:
+    print(f"O número {numero} em octal é: {oct(numero)}")
+elif escolha == 3:
+    print(f"O número {numero} em hexadecimal é: {hex(numero)}")
+else:
+    print("Você escolheu uma opção inválida.")

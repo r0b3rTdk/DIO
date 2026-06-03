@@ -1,0 +1,30 @@
+'''Desenvolva um programa que leia o nome, idade e sexo de 4 pessoas. 
+No final do programa, mostre: a média de idade do grupo, qual é o nome do homem mais velho
+e quantas mulheres têm menos de 20 anos.'''
+
+soma_idade = 0
+media_idade = 0
+maior_idade_M = 0
+nome_velho = ''
+quant_F_20anos = 0
+for p in range(1, 5):
+    print(f"----- {p} PESSOA -----")
+    nome = input("digite seu nome: ").strip()
+    idade = int(input("digite sua idade: "))
+    sexo = input("Sexo[M/F]: ").strip().upper()
+    soma_idade += idade
+    if p == 1 and sexo == 'M':
+        maior_idade_M = idade
+        nome_velho = nome
+    elif sexo == 'M':
+        if idade > maior_idade_M:
+            maior_idade_M = idade
+            nome_velho = nome
+    else:
+        if idade <= 20:
+            quant_F_20anos += 1
+        
+media_idade = soma_idade / 4
+print(f"a media da idade das 4 pessoas e {media_idade}")
+print(f"o homem mais velho se chama {nome_velho} e ele tem {maior_idade_M} anos")
+print(f"{quant_F_20anos} mulheres tem menos q 20")

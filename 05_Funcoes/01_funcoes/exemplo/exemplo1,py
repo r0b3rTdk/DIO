@@ -1,0 +1,32 @@
+def titulo(txt):
+    print("-" * 10)
+    print(txt)
+    print("-" * 10)
+
+def soma (a, b):
+    s = a + b
+    titulo(' SOMA ')
+    print(f"a soma de {a} e de {b} = {s}")
+
+def contador (* num):
+    tamanho = len(num)
+    titulo(' valores ')
+    print(f"recebi os valores {num} e sao ao todo {tamanho} numeros")
+
+def dobra(lista):
+    pos = 0
+    while pos < len(lista):
+        lista[pos] *= 2
+        pos += 1
+
+soma(4, 1)
+soma(7, 9)
+soma(b=43, a=10)
+
+contador(3, 5, 7)
+contador(2, 55)
+contador(32, 47, 79, 90, 73)
+
+valores = [4, 3, 5, 6, 9]
+dobra(valores)
+titulo(valores) 
